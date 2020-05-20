@@ -25,7 +25,8 @@ let g:winManagerWindowLayout = "TagList"
 let g:winManagerWidth    = 30
 let g:AutoOpenWinManager = 1
 "nmap <Leader>L :WMToggle<cr>
-nmap <silent> <F8> :WMToggle<cr>
+"nmap <silent> <F8> :WMToggle<cr>
+nmap <F8> :TagbarToggle<CR>
 
 "nerdtree
 nmap <Leader>N :NERDTree <cr>
@@ -78,8 +79,8 @@ if $TERM=="xterm-256color"
     else
       set t_Co=8
 endif
-"colorschem wombat256_modified
-colorschem solarized
+colorschem wombat256_modified
+"colorschem solarized
 "colorschem herald_modified
 "colorschem mac_classic
 "colorschem benlight
@@ -102,6 +103,7 @@ let g:AutoPairsShortcutToggle = '<C-x>p'
 
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 "let g:ag_prg="<custom-ag-path-goes-here> --vimgrep"
